@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mo Shivam Kumar | Portfolio</title>
+
+<style>
+/* ===== GLOBAL ===== */
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif}
+body{
+background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);
+color:white;
+overflow-x:hidden;
+scroll-behavior:smooth;
+}
+
+/* Scroll Progress Bar */
+#progressBar{
+position:fixed;
+top:0;
+left:0;
+height:4px;
+background:linear-gradient(90deg,#00f2ff,#ff00ea);
+width:0%;
+z-index:1000;
+}
+
+/* Navbar */
+nav{
+position:fixed;
+top:0;
+width:100%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 40px;
+background:rgba(0,0,0,0.4);
+backdrop-filter:blur(10px);
+z-index:999;
+}
+
+nav h2{
+background:linear-gradient(90deg,#00f2ff,#ff00ea);
+-webkit-background-clip:text;
+color:transparent;
+}
+
+nav ul{
+list-style:none;
+display:flex;
+gap:30px;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+font-weight:500;
+position:relative;
+transition:0.3s;
+}
+
+nav ul li a:hover{
+color:#00f2ff;
+}
+
+nav ul li a::after{
+content:"";
+position:absolute;
+width:0%;
+height:2px;
+bottom:-5px;
+left:0;
+background:linear-gradient(90deg,#00f2ff,#ff00ea);
+transition:0.4s;
+}
+
+nav ul li a:hover::after{
+width:100%;
+}
+
+/* Sections */
+section{
+min-height:100vh;
+padding:120px 10%;
+opacity:0;
+transform:translateY(40px);
+transition:1s ease;
+}
+
+section.show{
+opacity:1;
+transform:translateY(0);
+}
+
+/* Hero */
+.hero{
+display:flex;
+flex-direction:column;
+justify-content:center;
+}
+
+.hero h1{
+font-size:50px;
+background:linear-gradient(90deg,#00f2ff,#ff00ea);
+-webkit-background-clip:text;
+color:transparent;
+}
+
+.hero p{
+margin-top:20px;
+max-width:600px;
+line-height:1.6;
+opacity:0.8;
+}
+
+/* Cards */
+.card{
+background:rgba(255,255,255,0.08);
+padding:25px;
+border-radius:15px;
+margin-top:20px;
+backdrop-filter:blur(15px);
+transition:0.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+background:linear-gradient(135deg,#00f2ff33,#ff00ea33);
+}
+
+/* Buttons */
+.btn{
+display:inline-block;
+margin-top:20px;
+padding:12px 25px;
+border-radius:30px;
+background:linear-gradient(90deg,#00f2ff,#ff00ea);
+color:white;
+text-decoration:none;
+font-weight:bold;
+transition:0.3s;
+}
+
+.btn:hover{
+transform:scale(1.1);
+}
+
+/* Chatbot */
+.chatbot{
+position:fixed;
+bottom:20px;
+right:20px;
+background:linear-gradient(135deg,#00f2ff,#ff00ea);
+width:60px;
+height:60px;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+cursor:pointer;
+font-size:25px;
+}
+
+/* Responsive */
+@media(max-width:768px){
+nav ul{gap:15px;font-size:14px}
+.hero h1{font-size:32px}
+}
+</style>
+</head>
+
+<body>
+
+<div id="progressBar"></div>
+
+<nav>
+<h2>Mo Shivam Kumar</h2>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#resume">Resume</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#achievements">Achievements</a></li>
+<li><a href="#info">My Info</a></li>
+<li><a href="#friend">Friend</a></li>
+</ul>
+</nav>
+
+<section id="home" class="hero">
+<h1>Hello, I'm Mo Shivam Kumar</h1>
+<p>Student passionate about learning technology and coding. My goal is to become a skilled Software Engineer in the future.</p>
+<a href="#projects" class="btn">View Work</a>
+</section>
+
+<section id="resume">
+<h1>Resume</h1>
+<div class="card">
+<h3>Skills</h3>
+<p>HTML, CSS, Basic JavaScript, Logical Thinking, Problem Solving</p>
+</div>
+
+<div class="card">
+<h3>Experience</h3>
+<p>Currently studying in class 8th, learning programming and school projects.</p>
+</div>
+</section>
+
+<section id="projects">
+<h1>Projects</h1>
+<div class="card">
+<h3>School Projects</h3>
+<p>Mini coding projects and assignments to practice problem-solving skills.</p>
+</div>
+<div class="card">
+<h3>Creative Work</h3>
+<p>Digital posters, presentations and small web projects.</p>
+</div>
+</section>
+
+<section id="achievements">
+<h1>Achievements</h1>
+<div class="card">
+<p>🏆 School competitions participation</p>
+<p>🏆 Science fair projects</p>
+<p>🏆 Consistent academic performance</p>
+</div>
+</section>
+
+<section id="info">
+<h1>My Info</h1>
+<div class="card">
+<p>🏫 Class: 8th</p>
+<p>🔢 Roll Number: 17</p>
+<p>🎓 Goal: Future Software Engineer</p>
+<p>📧 Email: rocksky@gmail.com</p>
+</div>
+</section>
+
+<section id="friend">
+<h1>My Friend</h1>
+<div class="card">
+<p>👤 Name: Sahil Kumar</p>
+<p>🏫 Class: 8th</p>
+<p>🔢 Roll Number: (fill if known)</p>
+<p>🎓 Goal: Future Software Engineer</p>
+</div>
+</section>
+
+<div class="chatbot" onclick="alert('AI Chatbot Integration Ready!')">🤖</div>
+
+<script>
+/* Scroll Progress */
+window.onscroll=function(){
+let winScroll=document.body.scrollTop||document.documentElement.scrollTop;
+let height=document.documentElement.scrollHeight-document.documentElement.clientHeight;
+let scrolled=(winScroll/height)*100;
+document.getElementById("progressBar").style.width=scrolled+"%";
+};
+
+/* Section Animation */
+const sections=document.querySelectorAll("section");
+window.addEventListener("scroll",()=>{
+sections.forEach(sec=>{
+let top=window.scrollY;
+let offset=sec.offsetTop-400;
+if(top>offset){
+sec.classList.add("show");
+}
+});
+});
+</script>
+
+</body>
+</html>
